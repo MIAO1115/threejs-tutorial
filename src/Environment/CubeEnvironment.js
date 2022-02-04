@@ -20,7 +20,7 @@ import AstronautGLB from '../Assets/Models/Astronaut.glb'
 import Chair from '../Assets/Models/Chair.glb'
 import Car from '../Assets/Models/car.glb'
 import { OverlayItem } from '../Utility/Models/OverlayItem';
-
+import miao_car from '../Assets/Models/miao_car.glb';
 const CubeEnvironmentWrapper = styled.div`height: 100vh;`;
 
 /**
@@ -132,9 +132,10 @@ class CubeEnvironment extends Component {
      */
 	populateScene = () => {
 		this.addHelpers();
-		this.addLights();
-		this.addCube( new THREE.Vector3(0,0,0),this.overlayItem);
-		// this.addModel(Car, new THREE.Vector3(0,0,0), this.overlayItem);
+		this.addLights();	
+		this.addModel(miao_car, new THREE.Vector3(0,0,0), this.overlayItem)
+		//this.addCube( new THREE.Vector3(0,0,0),this.overlayItem);
+	;
 		// this.setupFog();
 	};
 
